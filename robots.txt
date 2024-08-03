@@ -1,3 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow: /cgi-bin/
-Sitemap:  https://store.trustglobal.com.bd/sitemap.xml
+Disallow: 
+
