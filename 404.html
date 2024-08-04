@@ -13,7 +13,7 @@
       for (var i = 0; i < segmentCount; i++) {
         redirect += '/' + parts.shift();
       }
-      redirect += '/?p=/' + parts.join('/');
+      redirect += '/' + parts.join('/');
       if (location.search) {
         redirect += '&q=' + location.search.slice(1);
       }
