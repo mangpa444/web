@@ -2,31 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Store - Redirecting</title>
+    <title>Store - Page Not Found</title>
     <script type="text/javascript">
-      // Construct the URL to redirect to
-      var segmentCount = 0;
-      var location = window.location;
-      var redirect = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
-      var path = location.pathname.slice(1);
-      var parts = path.split('/');
-      for (var i = 0; i < segmentCount; i++) {
-        redirect += '/' + parts.shift();
-      }
-      redirect += '/' + parts.join('/');
-      if (location.search) {
-        redirect += '&q=' + location.search.slice(1);
-      }
-      if (location.hash) {
-        redirect += location.hash;
-      }
-      sessionStorage.redirect = redirect;
-      // Redirect to the root
-      window.location.replace(redirect);
+      sessionStorage.redirect = location.href;
     </script>
+    <meta http-equiv="refresh" content="0;URL='/'">
   </head>
   <body>
-    <h1>Redirecting...</h1>
-    <p>If you are not redirected automatically, please click <a href="/">here</a>.</p>
+    Redirecting to the homepage...
   </body>
 </html>
